@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love ✨</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
+        integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+
+ 
+        <script>
+        document.getElementsByClassName("lastGiftCard").addEventListener("click", function playOnce(){
+        document.getElementById("romanticSong").play();
+        this.removeEventListener("click", playOnce);
+        }, {once:true});
+        </script>
+</head>
+
+<body>
+    <!-- Floating Hearts -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Hero Section -->
+    <div class="page active" id="heroSection">
+        <h1>Happy Birthday, My Love! 💕</h1>
+        <p>Today is all about celebrating SUSU</p>
+        <div class="button-container">
+            <button class="btn" onclick="showPage('giftsPage')">Open Your Gift 🎁</button>
+            <button class="btn" onclick="showPage('noPage')">No Thanks</button>
+        </div>
+    </div>
+
+    <!-- First No Page-->
+    <div class="page" id="noPage">
+        <div class="sad-emoji">
+            <img src="./pic/Subject.PNG" style="height: 200px;" alt="">
+        </div>
+        <h1 style="direction: rtl;">واللههههييييي!!!!!!!!</h1>
+        <p style="direction: rtl;font-size: 1.5rem; margin: 20px 0; color: #555;">طب رجعي رجعي خديها يلا لشووووف</p>
+        <div class="button-container" style="direction: rtl;">
+            <button class="btn" onclick="showPage('heroSection')">خلص أسفة</button>
+            <button class="btn" onclick="showPage('NoPage')">بديييش يه...</button>
+        </div>
+    </div>
+
+
+    <!-- Secound No Page -->
+    <div id="NoPage" class="page">
+        <div class="sad-emoji relative"><img src="pic/snoopy.gif" alt="" srcset=""> </div>
+        <!-- <div class="sad-emoji relative animate-bounce tenor-gif-embed" data-postid="21920096" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%"><a href="https://tenor.com/view/sigh-snoopy-woodstock-deep-breath-sad-gif-21920096">Sigh Snoopy Sticker</a>from <a href="https://tenor.com/search/sigh-stickers">Sigh Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> -->
+        <h1>I Promise You'll Like It!</h1>
+        <p style="font-size: 1.5rem; margin: 20px 0; color: #555;">Please give it a chance... 💕</p>
+        <button style="direction: rtl;" class="btn btn-retry" onclick="showPage('heroSection')">خلصصص
+            ماشيييي...</button>
+    </div>
+
+
+    <!-- Gifts Page -->
+    <div id="giftsPage" class="page">
+        <div class="gifts-header">
+            <h1>
+                <span class="heart-sparkle">💖</span>
+                Choose Your Gift!
+                <span class="heart-sparkle">💖</span>
+            </h1>
+            <p>Click on any gift to open it 💝</p>
+        </div>
+
+        <div class="gifts-grid">
+            <div class="gift-card pink1" onclick="showPage('galleryPage')">
+                <div class="gift-icon">
+                    <img src="./pic/camera.png" class="icon-img" alt="">
+                </div>
+            </div>
+
+            <div class="gift-card pink2" onclick="showPage('reasonsPage')">
+                <div class="gift-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" class="icon-svg"
+                        fill="white">
+                        <path
+                            d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="gift-card pink3" onclick="showPage('flowersPage')">
+                <div class="gift-icon">
+                    <img src="./pic/bouquetWhite.png" class="icon-img" alt="">
+                </div>
+            </div>
+
+            <div class="gift-card pink4" onclick="showPage('songPage')">
+                <div class="gift-icon">
+                    <img src="./pic/love-song.png" class="icon-img" alt="">
+                </div>
+            </div>
+
+            <div class="gift-card pink4 lastGiftCard" onclick="showPage('cakePage')">
+                <div class="gift-icon">
+                    <img src="./pic/birthday-cake.png" class="icon-img" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-message">
+            <h2>Happy Birthday My Love! 🎂</h2>
+            <p>I hope these gifts bring a smile to your face. You mean the world to me! 💕</p>
+        </div>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="galleryPage" class="page memories-page">
+
+        <div class="section-header">
+            <h1 class="memories-title">Captured Memories 🤍</h1>
+        </div>
+        <img src="./pic/page_001.png" alt="" style="width:100%;" srcset="">
+
+        <div class="memories-grid">
+            <div class="polaroid">
+                <video loop autoplay muted src="./pic/us/1.MP4"></video>
+                <span class="label">first date</span>
+            </div>
+
+            <div class="polaroid tall">
+                <img src="./pic/us/1.JPG" alt="" style="object-position: 80% center">
+                <!-- <img src="./pic/p2.jpg" alt=""> -->
+                <span class="label">ماتشاااا</span>
+            </div>
+
+            <div class="polaroid tall">
+                <img src="./pic/us/4.jpg" alt="" style="object-position: 60% center">
+                <span class="label">I wanna kill u😭</span>
+            </div>
+
+            <div class="polaroid">
+                <img src="./pic/us/7.JPG" alt="">
+                <span class="label">خلصنااا embeded</span>
+            </div>
+
+        </div>
+        <div class="back-container">
+            <button class="back-btn" onclick="showPage('giftsPage')">
+                ⬅ Back to Gifts
+            </button>
+        </div>
+    </div>
+
+    <!-- Reasons Page -->
+    <div class="page" id="reasonsPage">
+
+        <div class="section-header">
+            <h1>10 Reasons Why I Love You ❤️</h1>
+            <p class="section-sub">Scroll through them… each one is from my heart.</p>
+        </div>
+
+        <div class="reasons-list">
+            <div class="reason-card">You make every day feel lighter.</div>
+            <div class="reason-card">Your laugh is my favorite sound.
+                <span dir="rtl" style="display:block; font-size:0.85rem; color:#777; font-weight:300; margin-top:0.25rem;">
+                    (بس طبعا مش قدام النااااس)
+                </span>
+            </div>
+            <div class="reason-card">You always understand me.</div>
+            <div class="reason-card">You make me want to be better.</div>
+            <div class="reason-card">You're soft, sweet, stubborn, and perfect.</div>
+            <div class="reason-card">I feel safe around you.</div>
+            <div class="reason-card">You care more than you show.</div>
+            <div class="reason-card">Your presence feels like home.</div>
+            <div class="reason-card">Of course cuz you are HOT 🔥</div>
+            <div class="reason-card">Because you're YOU… and that’s more than enough.</div>
+        </div>
+
+       <div class="back-container">
+            <button class="back-btn" onclick="showPage('giftsPage')">
+                ⬅ Back to Gifts
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- Flowers Page - Growing Rose (Instant Start + Perfect Message) -->
+<!-- Flowers Page - Growing Rose (starts ONLY when .active is added) -->
+<div class="page" id="flowersPage">
+
+    <div class="section-header">
+
+    </div>
+
+    <div class="flower-scene">
+        <div class="stem"></div>
+        <div class="leaf left"></div>
+        <div class="leaf right"></div>
+
+        <div class="rose">
+            <div class="petal p1"></div>
+            <div class="petal p2"></div>
+            <div class="petal p3"></div>
+            <div class="petal p4"></div>
+            <div class="petal p5"></div>
+            <div class="rose-center"></div>
+        </div>
+
+        <!-- Your message – edit this however you want -->
+        <div class="love-letter">
+            <div class="letter-content">
+                <h3>Happy Birthday, my everything ❤️</h3>
+                <p>
+                    This rose grew the same way I fell for you —<br>
+                    slowly at first… then all at once.<br><br>
+                    Every day with you feels like the most beautiful bloom<br>
+                    and I still can’t believe you’re mine.
+                </p>
+                <p class="signature">— I love you endlessly</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-container">
+        <button class="back-btn" onclick="showPage('giftsPage')">
+            ⬅ Back to Gifts
+        </button>
+    </div>
+</div>
+<script>
+function showFlowerMsg(flower, message) {
+    document.getElementById('flowerName').textContent = flower;
+    document.getElementById('flowerText').innerHTML = message;
+    document.getElementById('flowerPopup').style.display = 'flex';
+}
+</script>
+
+
+    <!-- Song Page -->
+    <div class="page" id="songPage">
+        <div class="section-header">
+            <h1>Your Song 🎶</h1>
+            <p class="section-sub">Play it whenever your heart needs me 💕</p>
+        </div>
+        
+        <!-- Hand-drawn doodles -->
+        <div class="doodle-images">
+            <img src="./pic/MorphLoveMusic.gif" alt="Headphones" class="doodle-img">
+            <img src="pic/MusicNoteLove.gif" class="song-gif" alt="music animation">
+        </div>
+        
+        <!-- Music gif -->
+        <div class="song-gif-box">
+            
+        </div>
+        
+        <!-- YouTube Embed -->
+        <div class="song-video-box">
+            <iframe src="https://www.youtube.com/embed/BPaeagxAQxE?list=RDBPaeagxAQxE"
+                    title="Cigarettes After Sex - Apocalypse (Lyrics)" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+        
+        <!-- Special message (extra cute version) -->
+        <div dir="ltr" class="song-message-box">
+            <p class="song-message">
+                This is <span style="color:#ff6fb7;font-weight:bold;">our</span> song now. ♡<br><br>
+                Every time I hear it I swear the world slows down and it’s just you and me again.<br><br>
+                Wait for <span style="color:#ff6fb7;">2:06</span>…<br>
+            
+                That line hits and my heart literally skips a beat. That’s the moment I fall in love with you all over again. Every single time. 🦋<br><br>
+                Because in that exact moment I’m not listening anymore. I’m kissing you.<br>
+                Slow, soft, endless… your hands in my hair, my arms around you, the whole world disappearing.<br><br>
+            </p>
+        </div>
+    
+        <div class="tiny-heart">♡</div>
+        
+        <div class="back-container">
+            <button class="back-btn" onclick="showPage('giftsPage')">
+                ⬅ Back to Gifts
+            </button>
+        </div>
+    </div>
+
+
+    <!--Cake page-->
+    <div class="page" id="cakePage">
+        <audio id="romanticSong" loop>
+            <source src="https://assets.mixkit.co/music/preview/mixkit-dreams-of-love-88.mp3" type="audio/mpeg">
+        </audio>
+
+
+        <div id="wishText">
+            <span>Make a wish, baby...</span>
+        </div>
+        <div class="candle-count-display">
+        Candles on the Cake: <span id="candleCount">0</span>
+        </div>
+        <div class="cake">
+            <div class="plate"></div>
+            <div class="layer layer-bottom"></div>
+            <div class="layer layer-middle"></div>
+            <div class="layer layer-top"></div>
+            <div class="icing"></div>
+            <div class="drip drip1"></div>
+            <div class="drip drip2"></div>
+            <div class="drip drip3"></div>
+            <!-- 21 LIT CANDLES – PERFECTLY POSITIONED & SHIFTED UP/LEFT -->
+            <div class="candle" style="left: 65px;   top: -5px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 95px;   top: -8px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 125px;  top: -10px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 155px;  top: -8px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 185px;  top: -5px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 215px;  top: -2px;"><div class="flame"></div></div>
+
+            <div class="candle" style="left: 50px;   top: 12px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 80px;   top: 9px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 110px;  top: 7px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 140px;  top: 6px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 170px;  top: 7px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 200px;  top: 10px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 230px;  top: 15px;"><div class="flame"></div></div>
+
+            <div class="candle" style="left: 65px;   top: 32px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 95px;   top: 28px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 125px;  top: 26px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 155px;  top: 26px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 185px;  top: 28px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 215px;  top: 32px;"><div class="flame"></div></div>
+
+            <div class="candle" style="left: 110px;  top: 48px;"><div class="flame"></div></div>
+            <div class="candle" style="left: 170px;  top: 48px;"><div class="flame"></div></div>
+        </div>
+        <div class="back-container">
+            <button class="back-btn" onclick="showPage('giftsPage')">
+                ⬅ Back to Gifts
+            </button>
+        </div>
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+
+</html>
