@@ -20,6 +20,20 @@
         document.getElementById("romanticSong").play();
         this.removeEventListener("click", playOnce);
         }, {once:true});
+
+        // Preload all important gallery assets as soon as page loads
+        const galleryAssets = [
+            "./pic/page_001.png",
+        ];
+
+        galleryAssets.forEach(src => {
+            if (src.endsWith('.png') || src.endsWith('.jpg') || src.endsWith('.JPG')) {
+                new Image().src = src;
+            } else if (src.endsWith('.MP4') || src.endsWith('.mp4')) {
+                const video = document.createElement('video');
+                video.src = src;
+            }
+        });
         </script>
 </head>
 
@@ -53,7 +67,7 @@
 
     <!-- Secound No Page -->
     <div id="NoPage" class="page">
-        <div class="sad-emoji relative"><img src="pic/snoopy.gif" alt="" srcset=""> </div>
+        <div class="sad-emoji relative"><img src="pic/snoopy.gif"> </div>
         <!-- <div class="sad-emoji relative animate-bounce tenor-gif-embed" data-postid="21920096" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%"><a href="https://tenor.com/view/sigh-snoopy-woodstock-deep-breath-sad-gif-21920096">Sigh Snoopy Sticker</a>from <a href="https://tenor.com/search/sigh-stickers">Sigh Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> -->
         <h1>I Promise You'll Like It!</h1>
         <p style="font-size: 1.5rem; margin: 20px 0; color: #555;">Please give it a chance... 💕</p>
